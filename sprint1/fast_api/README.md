@@ -140,5 +140,5 @@ pytest tests/
 
 Скриншот из Swagger (как выглядит API)
 
-![img.png](img.png)
+!![Скриншот](images/swagger_screenshot.jpg)
 

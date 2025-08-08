@@ -28,6 +28,7 @@ python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate  # Windows
 pip install -r requirements.txt
+```bash
 
 🚀 Запуск
 uvicorn main:app --reload
@@ -38,7 +39,7 @@ uvicorn main:app --reload
 🆕 Добавить перевал
 
 POST /submitData/
-
+```bash
 {
   "user": {
     "email": "user@example.com",
@@ -69,7 +70,7 @@ POST /submitData/
   "other_titles": "Доп. название",
   "connect": "Соединение"
 }
-
+```bash
 
 📝 Получить данные о перевале
 
@@ -82,7 +83,7 @@ PATCH /submitData/{id}
 GET /submitData/?user__email=user@example.com
 🗃️ Структура базы данных
 
-
+```bash
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -121,7 +122,7 @@ CREATE TABLE pereval_images (
     image BYTEA NOT NULL,
     title VARCHAR(255)
 );
-
+```bash
 
 
 🧪 Тестирование
@@ -139,6 +140,3 @@ pytest tests/
     Поддержка: support@fstr.ru
 
 Скриншот из Swagger (как выглядит API)
-
-![img.png](img.png)
-
